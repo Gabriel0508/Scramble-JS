@@ -1,0 +1,39 @@
+@import "./game.scss";
+@import "./mixins.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../assets/images/scramble-2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .container {
+    width: 40%;
+    height: 40vh;
+    margin: 0 auto;
+    background-color: rgb(225, 177, 119);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    h1 {
+      color: #61876e;
+      font-family: "JetBrains Mono", monospace;
+    }
+
+    .btn {
+      @include button;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@import "./mixins.scss";
+
+.game-container {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  height: 80vh;
+  width: 60%;
+  background-color: rgb(225, 177, 119);
+  border-radius: 2%;
+  h1 {
+    font-size: 2rem;
+    color: #61876e;
+    font-family: "JetBrains Mono", monospace;
+    padding: 1rem;
+  }
+  .letters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #61876e;
+    width: 50%;
+    height: 10vh;
+    .random-text {
+      color: white;
+      font-size: 2rem;
+    }
+  }
+  .hint-container {
+    width: 55%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      font-size: 1.5rem;
+      color: #61876e;
+    }
+    .hint {
+      font-size: 1.5rem;
+      color: white;
+    }
+  }
+  .timer {
+    color: #61876e;
+    font-size: 1.2rem;
+    padding: 1rem 0;
+  }
+  .text-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    .text {
+      outline: none;
+      border: 1px solid #61876e;
+      color: #61876e;
+      padding: 0.5rem;
+      font-size: 1.5rem;
+    }
+    ::placeholder {
+      color: #61876e;
+    }
+
+    .buttons {
+      padding: 1rem 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .btn {
+        @include button;
+      }
+    }
+  }
+}

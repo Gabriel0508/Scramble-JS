@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scramble</title>
+  </head>
+  <body>
+    <section class="home">
+      <div class="container">
+        <h1>Welcome to Scramble</h1>
+        <button type="button" id="startBtn" class="btn">Start Game</button>
+      </div>
+
+      <div class="game-container">
+        <h1>SCRAMBLE</h1>
+        <div class="letters">
+          <p class="random-text"></p>
+        </div>
+
+        <div class="hint-container">
+          <span>Hint:</span>
+          <p class="hint"></p>
+        </div>
+
+        <div class="timer">
+          <p id="ten-countdown"></p>
+        </div>
+
+        <div class="text-container">
+          <input
+            type="text"
+            class="text"
+            spellcheck="false"
+            placeholder="Enter a valid text"
+          />
+          <div class="buttons">
+            <button id="refresh-text" class="btn">Refresh</button>
+            <button id="check-text" class="btn">Enter</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
