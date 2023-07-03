@@ -1,6 +1,5 @@
 import * as Elements from "./elements.js";
 import { initializeGame } from "./initGame.js";
-import { timer } from "./countDown.js";
 
 export class StartGame {
   static startGame() {
@@ -8,7 +7,5 @@ export class StartGame {
     Elements.game.style.display = "flex";
 
     initializeGame();
-
-    timer("ten-countdown", 1, 0);
   }
 }

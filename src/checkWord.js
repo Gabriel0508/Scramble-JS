@@ -1,5 +1,5 @@
 import * as Elements from "./elements.js";
-import { InitGame } from "./initGame";
+import { initializeGame } from "./initGame";
 
 export class CheckWord {
   static checkWordText = () => {
@@ -11,7 +11,7 @@ export class CheckWord {
     if (userWord !== Elements.correctWord) {
       return alert(`Oops! ${userWord} is not a match`);
     } else {
-      return alert(`Congrats!`);
+      return alert(`Congrats!`) + location.reload();
     }
   };
 }

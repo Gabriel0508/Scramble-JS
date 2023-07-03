@@ -1,9 +1,9 @@
 import * as Words from "./text.js";
 import * as Elements from "./elements.js";
-import { timer } from "./countDown.js";
+import { initTimer } from "./countDown.js";
 
 export const initializeGame = () => {
- // timer("ten-countdown", 1, 0);
+  initTimer(30);
   let randomObj = Words.words[Math.floor(Math.random() * Words.words.length)];
   let wordArray = randomObj.word.split("");
   for (let i = wordArray.length - 1; i > 0; i--) {

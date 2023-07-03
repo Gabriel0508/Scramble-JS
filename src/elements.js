@@ -7,6 +7,6 @@ export const hintText = document.querySelector(".hint");
 export const inputText = document.querySelector(".text");
 export const refreshBtn = document.querySelector("#refresh-text");
 export const checkBtn = document.querySelector("#check-text");
-export const timeText = document.querySelector("#ten-countdown")
+export const timeText = document.querySelector("#ten-countdown");
 
 export let correctWord;
