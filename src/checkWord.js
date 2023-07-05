@@ -6,12 +6,27 @@ export class CheckWord {
     let userWord = Elements.inputText.value.toLowerCase();
 
     if (!userWord) {
-      return alert("Please enter the word to check!");
+      Elements.dialog.show();
+      Elements.dialog.style.display = "flex";
+      Elements.homePage.classList.add("is-blurred");
+      Elements.closeDialog.innerHTML = "Try again";
+      return (Elements.dialogContent.innerHTML =
+        "Please enter the word to check!");
     }
+
     if (userWord !== Elements.correctWord) {
-      return alert(`Oops! ${userWord} is not a match`);
+      Elements.dialog.show();
+      Elements.dialog.style.display = "flex";
+      Elements.homePage.classList.add("is-blurred");
+      Elements.closeDialog.innerHTML = "Try again";
+      return (Elements.dialogContent.innerHTML = `Oops! ${userWord} is not a match!!`);
     } else {
-      return alert(`Congrats!`) + location.reload();
+      Elements.dialog.show();
+      Elements.dialog.style.display = "flex";
+      Elements.homePage.classList.add("is-blurred");
+      Elements.closeDialog.innerHTML = "New Game";
+      Elements.dialogContent.innerHTML = `Congrats! ${userWord} is the correct word.`;
+      initializeGame();
     }
   };
 }

@@ -17,6 +17,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+
   .container {
     width: 40%;
     height: 40vh;
@@ -26,6 +28,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    box-shadow: 0 60px 80px rgba(0, 0, 0, 0.6), 0 45px 26px rgba(0, 0, 0, 0.14);
 
     h1 {
       color: #61876e;
@@ -36,4 +39,36 @@
       @include button;
     }
   }
+}
+
+.dialog {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 0 auto;
+  width: 25rem;
+  height: 30vh;
+  background-color: #61876e;
+  bottom: 40%;
+  font-size: 1.5rem;
+  border: none;
+  box-shadow: 0 60px 80px rgba(0, 0, 0, 0.6), 0 45px 26px rgba(0, 0, 0, 0.14);
+  .dialog-text {
+    text-align: center;
+    color: #ffff;
+  }
+  .close-dialog {
+    @include button;
+  }
+}
+
+.is-blurred {
+  filter: blur(0.1rem);
+  -webkit-filter: blur(0.1rem);
+  pointer-events: none;
+  filter: brightness(25px);
 }
